@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<section id="home">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12">
+        <h2>The creative web & mobile studio. we are young designers and focused on brand identity, web development and social marketing.</h2>
+        <hr>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+
+      {% assign items = site.portfolios | sort: 'order' %}
+      {% for portfolio in items %}
+      <div class="col-md-4 col-sm-6">
+        <a href="{{ portfolio.url }}">
+          <div class="portfolio-thumb">
+            <img src="{{ portfolio.thumb_location }}" class="img-responsive" alt="Portfolio">
+            <div class="portfolio-overlay">
+              <div class="portfolio-item">
+                <h3>{{ portfolio.title }}</h3>
+                <small>{{ portfolio.tags | join: " , "}}</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+
+      <div class="col-md-12 col-sm-12 text-center">
+        <h3>hello, if you interest working together. just send message <a href="contact.html">contact page</a></h3>
+      </div>
+
+    </div>
+  </div>
+</section>

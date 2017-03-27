@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+  <script src="{{ "/js/jquery.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/js/custom.js" | prepend: site.baseurl }}"></script>
+</html>
